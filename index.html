@@ -1,23 +1,321 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rosa Nóbrega - Psicóloga</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <nav class="cabeca">
-        <span class="logo"><p>Puff</p></span>
-        <ol>
-            <li>Inicio</li>
-            <li>Inicio</li>
-            <li>Inicio</li>
-            <li>Inicio</li>
-        </ol>
-    </nav>
-    <main>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="sparkle-icon">✦</span>
+        <span>Rosa Nóbrega</span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#problemas">Problemas</a>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#terapia">Sobre a Terapia</a>
+        <a href="#metodo">Destrava</a>
+        <a href="#feedbacks">Feedbacks</a>
+        <a href="#comentar">Comentar</a>
+        <button class="btn-primary">Agendar</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container grid-2">
+        <div class="hero-text">
+          <div class="badge-label">
+            <span class="sparkle-icon">✦</span>
+            Especialista em comportamento
+          </div>
+          <h1>Sua melhor versão <br/><em>começa por dentro.</em></h1>
+          <p>Psicologia especializada em comportamento feminino, autoestima e reconstrução emocional. Transforme sua relação consigo mesma.</p>
+          <div class="hero-actions">
+            <button class="btn-primary btn-lg">Agendar Consulta</button>
+            <a href="#metodo" class="link-arrow">Saiba mais <span class="bounce">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="img-container">
+            <img src="IMG/SectionInicio.jpeg" alt="">
+          </div>
+          <div class="color-dots right">
+            <span class="dot dot-blush"></span>
+            <span class="dot dot-salmon"></span>
+            <span class="dot dot-burgundy"></span>
+          </div>
+          <span class="sparkle-icon sparkle-lg top-right">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMAS -->
+    <section id="problemas" class="problems bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="sparkle-icon">✦</span>
+          <h2>Você se reconhece nisso?</h2>
+        </div>
+        <div class="grid-2">
+          <div class="img-col">
+            <div class="img-container">
+             <img src="IMG/SectionReconhece.jpeg" alt="">
+            </div>
+          </div>
+          <div class="text-col">
+            <div class="problem-block">
+              <h3>Você sabe o que precisa fazer, mas não consegue manter.</h3>
+              <p>Sente que está sempre recomeçando? A autossabotagem e a procrastinação emocional geram uma culpa constante que te impede de avançar.</p>
+            </div>
+            <div class="problem-block">
+              <h3>Você se olha no espelho e não se reconhece.</h3>
+              <p>O cansaço e a desconexão com sua própria imagem drenam sua energia. Você sente que perdeu sua essência em meio às demandas do dia a dia.</p>
+            </div>
+            <div class="quote-box">
+              <p>"A raiz não é falta de força de vontade. É comportamento, identidade e emoções acumuladas que precisam ser ressignificadas."</p>
+            </div>
+            <p>Meu trabalho é ajudar mulheres a se tornarem mais seguras, disciplinadas e confiantes de dentro para fora.</p>
+            <ul class="outcomes-list">
+              <li>✅ Se priorizar sem culpa</li>
+              <li>✅ Criar constância emocional</li>
+              <li>✅ Desenvolver autoestima verdadeira</li>
+              <li>✅ Construir hábitos sustentáveis</li>
+              <li>✅ Fortalecer sua autoimagem</li>
+              <li>✅ Sair de ciclos destrutivos</li>
+            </ul>
+            <button class="btn-burgundy btn-lg">Quero Começar Agora</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="about bg-cream">
+      <div class="container grid-2">
+        <div class="about-text">
+          <span class="pill-badge">Sobre Mim</span>
+          <h2>Sobre Rosa</h2>
+          <p>Nascida na contagiante cidade de Salvador, na Bahia, sou mamãe da pequena Marina, casada, e apaixonada pela minha família.</p>
+          <p>Psicóloga clínica, especialista em comportamento humano, com foco no atendimento de homens e mulheres que estão em busca de equilíbrio emocional e psicológico.</p>
+          <p>Com dedicação e empatia, ofereço suporte a pessoas que enfrentam desafios internos. Utilizo uma combinação de abordagens terapêuticas, adaptando as técnicas de acordo com as necessidades e preferências de cada indivíduo.</p>
+          <p>Meu objetivo é proporcionar um ambiente seguro e acolhedor, onde possamos trabalhar juntos para promover a saúde mental e o bem-estar.</p>
         
-    </main>
+          <button class="btn-primary btn-lg">Agendar uma Conversa →</button>
+        </div>
+        <div class="hero-image">
+          <div class="img-container">
+            <img src="IMG/SectionSobre.jpeg" alt="">
+          </div>
+          <div class="color-dots left">
+            <span class="dot dot-blush"></span>
+            <span class="dot dot-salmon"></span>
+            <span class="dot dot-burgundy"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE A TERAPIA -->
+    <section id="terapia" class="therapy bg-white">
+      <div class="container">
+        <div class="section-header">
+          <h2>Sobre a Terapia</h2>
+          <p>Como as sessões funcionam, objetivos e o que esperar do processo terapêutico.</p>
+        </div>
+        
+        <div class="grid-2">
+
+          <div>
+            <div class="img-container">
+              <img src="IMG/SectionTerapia.jpeg" alt="">
+            </div>
+          </div>
+
+          <div>
+            <h3>Abordagem centrada na transformação</h3>
+           
+            <ul class="therapy-list">
+              <li> As sessões combinam acolhimento e técnicas práticas para ressignificar padrões comportamentais, fortalecer a autoestima e desenvolver constância emocional.</li>
+              <li> Sessões individuais com foco em objetivos pessoais</li>
+              <li> Ferramentas práticas para o dia a dia</li>
+              <li> Acompanhamento da construção de hábitos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉTODO DESTRAVA30 -->
+    <section id="metodo" class="method bg-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill-badge">Método Exclusivo</span>
+          <h2 class="title-xl">DESTRAVA30</h2>
+          <p>Como funciona o processo de transformação comportamental e emocional</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3>Diagnóstico Emocional</h3>
+            <p>Mapeamos os padrões que te prendem e as raízes comportamentais que sustentam o ciclo da estagnação.</p>
+          </div>
+          <div class="card">
+            <div class="card-number">02</div>
+            <h3>Reprogramação de Identidade</h3>
+            <p>Trabalhamos sua autoimagem, crenças limitantes e como você se relaciona consigo mesma de forma profunda.</p>
+          </div>
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3>Construção de Constância</h3>
+            <p>Desenvolvemos hábitos e comportamentos sustentáveis alinhados com a mulher que você deseja se tornar.</p>
+          </div>
+        </div>
+        <div class="waitlist-banner">
+          <h3>Inscrições Em Breve ✨</h3>
+          <p>O próximo grupo do Destrava30 está chegando. Entre na lista de espera e seja a primeira a saber.</p>
+          <form class="waitlist-form" onsubmit="handleWaitlist(event)">
+            <input type="email" placeholder="Seu melhor e-mail" required />
+            <button type="submit" class="btn-burgundy">Quero me inscrever</button>
+          </form>
+          <small>Vagas limitadas para acompanhamento individual.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACKS -->
+    <section id="feedbacks" class="feedbacks bg-white">
+      <div class="container">
+        <div class="section-header">
+          <h2>Transformações Reais</h2>
+          <p>O que dizem as mulheres que passaram pelo processo</p>
+        </div>
+        <div class="grid-3">
+          <div class="testimonial-card">
+            <p>"O processo com a Psi mudou completamente como eu me vejo. Pela primeira vez sinto que tenho controle sobre minhas emoções."</p>
+            <div class="testimonial-author">
+              <div class="avatar">ML</div>
+              <div>
+                <strong>Mariana Lima</strong>
+                <small>Paciente há 6 meses</small>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>"Eu vivia em ciclos de autossabotagem. O Método Destrava30 foi a chave para construir uma rotina que eu amo manter."</p>
+            <div class="testimonial-author">
+              <div class="avatar">RS</div>
+              <div>
+                <strong>Renata Souza</strong>
+                <small>Paciente há 1 ano</small>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>"A reconstrução da minha autoestima foi feita de forma tão acolhedora. Hoje me sinto segura para decisões que antes me paralisavam."</p>
+            <div class="testimonial-author">
+              <div class="avatar">AB</div>
+              <div>
+                <strong>Ana Beatriz</strong>
+                <small>Paciente há 4 meses</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-card"><span class="stat-number">150+</span><span>Mulheres atendidas</span></div>
+          <div class="stat-card"><span class="stat-number">93%</span><span>Relatam mudança real</span></div>
+          <div class="stat-card"><span class="stat-number">3 Anos</span><span>De especialização</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE DEPOIMENTO -->
+    <section id="comentar" class="feedback-form bg-gradient">
+      <div class="container narrow">
+        <div class="section-header">
+          <h2>Deixe seu Depoimento</h2>
+          <p>Sua experiência pode inspirar outra mulher a dar o primeiro passo.</p>
+        </div>
+        <div class="form-card">
+          <form onsubmit="handleFeedback(event)">
+            <div class="form-group">
+              <label>Seu Nome</label>
+              <input type="text" placeholder="Como você gostaria de ser chamada?" />
+            </div>
+            <div class="form-group">
+              <label>Como foi sua experiência?</label>
+              <textarea rows="4" placeholder="Conte-nos um pouco sobre sua jornada..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Sua Avaliação</label>
+              <div class="stars" id="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary btn-lg">Enviar Depoimento</button>
+              <small>Seu depoimento poderá ser publicado nesta página mediante sua autorização.</small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="sparkle-icon">✦</span>
+          <span>Rosa Nóbrega</span>
+        </div>
+        <p>Especialista em comportamento feminino, autoestima e reconstrução emocional.</p>
+        <div class="social-links">
+          <a href="#">Icone-Instagram</a>
+          <a href="#">Icone-ZapZap</a>
+          <a href="#">Icone-Email</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Acesso Rápido</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#feedbacks">Feedbacks</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p>Atendimento Online</p>
+        <p>WhatsApp:+55 71 9224-2424</p>
+        <p>contato@rosanobrega.com.br</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©Rosa Nóbrega. Todos os direitos reservados.</p>
+      <p>Desenvolvido com carinho para mulheres incríveis.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
