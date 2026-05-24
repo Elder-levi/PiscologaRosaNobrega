@@ -125,3 +125,139 @@ document.querySelectorAll('.card, .testimonial-card, .problem-block, .stat-card'
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// ========================
+// CARROSEL FEEDBACKS
+// ========================
+let currentSlide = 0;
+let totalSlides = 0;
+let feedbacksData = [];
+
+// Carregar feedbacks do JSON
+async function loadFeedbacks() {
+  try {
+    const response = await fetch('feedbacks.json');
+    const data = await response.json();
+    feedbacksData = data.feedbacks;
+    totalSlides = feedbacksData.length;
+    renderCarousel();
+    setupCarouselListeners();
+    startAutoPlay();
+  } catch (error) {
+    console.error('Erro ao carregar feedbacks:', error);
+  }
+}
+
+// Renderizar os cards de feedbacks
+function renderCarousel() {
+  const carouselWrapper = document.getElementById('carouselWrapper');
+  const carouselDots = document.getElementById('carouselDots');
+  
+  // Limpar conteúdo anterior
+  carouselWrapper.innerHTML = '';
+  carouselDots.innerHTML = '';
+  
+  // Criar cards de feedbacks
+  feedbacksData.forEach((feedback) => {
+    const card = document.createElement('div');
+    card.className = 'testimonial-card';
+    
+    // Extrair primeira letra do nome para o avatar
+    const avatarLetter = feedback.nome.charAt(0).toUpperCase();
+    
+    // Montar informações de localização
+    const localization = feedback.idade ? `${feedback.idade} ${feedback.cidade}` : feedback.cidade;
+    
+    card.innerHTML = `
+      <p>"${feedback.texto}"</p>
+      <div class="testimonial-author">
+        <div class="avatar">${avatarLetter}</div>
+        <div>
+          <strong>${feedback.nome}</strong>
+          <small>${localization}</small>
+        </div>
+      </div>
+    `;
+    
+    carouselWrapper.appendChild(card);
+  });
+  
+  // Criar dots de navegação
+  feedbacksData.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.className = `dot ${index === 0 ? 'active' : ''}`;
+    dot.dataset.slide = index;
+    dot.addEventListener('click', () => goToSlide(index));
+    carouselDots.appendChild(dot);
+  });
+}
+
+function updateCarousel() {
+  const carouselWrapper = document.getElementById('carouselWrapper');
+  if (carouselWrapper) {
+    carouselWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Atualiza os dots
+    const dots = document.querySelectorAll('#carouselDots .dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[currentSlide]) {
+      dots[currentSlide].classList.add('active');
+    }
+  }
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateCarousel();
+  resetAutoPlay();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateCarousel();
+  resetAutoPlay();
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateCarousel();
+  resetAutoPlay();
+}
+
+function setupCarouselListeners() {
+  const carouselPrevBtn = document.querySelector('.carousel-prev');
+  const carouselNextBtn = document.querySelector('.carousel-next');
+  const carouselWrapper = document.getElementById('carouselWrapper');
+
+  // Botões de navegação
+  if (carouselPrevBtn) {
+    carouselPrevBtn.addEventListener('click', prevSlide);
+  }
+
+  if (carouselNextBtn) {
+    carouselNextBtn.addEventListener('click', nextSlide);
+  }
+
+  // Pausa ao passar o mouse
+  if (carouselWrapper) {
+    carouselWrapper.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+    carouselWrapper.addEventListener('mouseleave', startAutoPlay);
+  }
+}
+
+// Carrosel automático
+let autoPlayInterval;
+
+function startAutoPlay() {
+  autoPlayInterval = setInterval(() => {
+    nextSlide();
+  }, 5000); // Muda a cada 5 segundos
+}
+
+function resetAutoPlay() {
+  clearInterval(autoPlayInterval);
+  startAutoPlay();
+}
+
+// Iniciar carrosel quando a página carregar
+document.addEventListener('DOMContentLoaded', loadFeedbacks);

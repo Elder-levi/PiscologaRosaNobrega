@@ -163,12 +163,107 @@ h1, h2, h3, h4 { font-family: var(--font-serif); }
    FEEDBACKS
 ======================== */
 .feedbacks { padding: 96px 24px; }
-.testimonial-card { background: var(--cream); border-radius: 2.5rem; padding: 40px; position: relative; }
-.testimonial-card p { font-size: 1.1rem; font-style: italic; color: var(--burgundy); margin-bottom: 32px; line-height: 1.7; }
+.testimonial-card { 
+  background: var(--cream); 
+  border-radius: 2.5rem; 
+  padding: 40px; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  justify-content: space-between;
+}
+.testimonial-card p { 
+  font-size: 1.1rem; 
+  font-style: italic; 
+  color: var(--burgundy); 
+  margin-bottom: 32px; 
+  line-height: 1.7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+}
 .testimonial-author { display: flex; align-items: center; gap: 16px; }
 .avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--rose); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
 .testimonial-author strong { display: block; font-family: var(--font-serif); color: var(--burgundy); }
 .testimonial-author small { display: block; font-size: 0.75rem; color: rgba(122,32,53,0.6); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ========================
+   CAROUSEL
+======================== */
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-wrapper .testimonial-card {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--salmon);
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: var(--burgundy);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: -70px;
+}
+
+.carousel-next {
+  right: -70px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(122,32,53,0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.carousel-dots .dot.active {
+  background: var(--salmon);
+  transform: scale(1.2);
+}
+
+.carousel-dots .dot:hover {
+  background: var(--rose);
+}
 
 .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 64px; }
 .stat-card { text-align: center; padding: 32px; border-radius: 1.5rem; border: 1px solid rgba(232,180,184,0.2); background: #fff; }
@@ -239,4 +334,13 @@ footer { background: var(--dark); color: #fff; padding: 80px 24px 32px; }
   .outcomes-list { grid-template-columns: 1fr; }
   .color-dots.right, .color-dots.left { display: none; }
   .waitlist-form { flex-direction: column; }
+  
+  /* Carrosel responsivo */
+  .carousel-prev {
+    left: -40px;
+  }
+  
+  .carousel-next {
+    right: -40px;
+  }
 }

@@ -1,0 +1,95 @@
+{
+  "feedbacks": [
+  {
+    "id": 1,
+    "nome": "D",
+    "idade": "24 anos",
+    "cidade": "Tramandaí - RS",
+    "texto": "A Rosa foi muito importante no meu processo. <br><br> Além de ser uma excelente profissional, com uma escuta acolhedora e muito sensível, se tornou alguém por quem tenho grande carinho e admiração. <br><br> Durante esse tempo, me senti ouvida, compreendida e acolhida em cada sessão."
+  },
+  {
+    "id": 2,
+    "nome": "B",
+    "idade": "14 anos",
+    "cidade": "Rio de Janeiro - RJ",
+    "texto": "Fazer terapia com a Rosa foi uma das melhores coisas que já fiz. <br><br> Ela consegue me ajudar a entender minha sombra e também minha luz. <br><br> Minha mente é um caos, mas agora consigo entender melhor o que ele significa sem me perder."
+  },
+  {
+    "id": 3,
+    "nome": "R",
+    "idade": "44 anos",
+    "cidade": "Portugal",
+    "texto": "Descobri a Rosa num momento super complicado da minha vida. <br><br> Foi o primeiro match perfeito que tive com uma psicóloga. <br><br> Nossa troca em cada sessão é maravilhosa."
+  },
+  {
+    "id": 4,
+    "nome": "J.B",
+    "idade": "42 anos",
+    "cidade": "Rio Grande do Sul - RS",
+    "texto": "Estamos juntas nessa caminhada há mais de um ano. <br><br> A Rosa, mesmo a quilômetros de distância, esteve comigo resignificando e ampliando muitas questões da minha vida."
+  },
+  {
+    "id": 5,
+    "nome": "L",
+    "idade": "24 anos",
+    "cidade": "Natal - RN",
+    "texto": "Procurei por muito tempo uma psicóloga com quem eu me identificasse. <br><br> Quando encontrei a Rosa, vi que tinha encontrado a profissional perfeita pra mim."
+  },
+  {
+    "id": 6,
+    "nome": "I",
+    "idade": "24 anos",
+    "cidade": "Goiânia - GO",
+    "texto": "A Rosa foi minha primeira psicóloga. <br><br> Ela é única, uma pessoa real e não só cheia de técnica. <br><br> É por isso que ela se torna tão especial."
+  },
+  {
+    "id": 7,
+    "nome": "H",
+    "idade": "54 anos",
+    "cidade": "Salvador - BA",
+    "texto": "Minha jornada começou com um acolhimento que fez toda diferença. <br><br> Isso abriu caminho para uma reconstrução emocional. <br><br> Sou eternamente grato."
+  },
+  {
+    "id": 8,
+    "nome": "M",
+    "idade": "45 anos",
+    "cidade": "Lauro de Freitas - BA",
+    "texto": "Minha filha faz terapia com Rosa e realmente está fazendo diferença em todas as áreas da vida dela. <br><br> A escuta amorosa e acolhedora é o diferencial da Psi."
+  },
+  {
+    "id": 9,
+    "nome": "C",
+    "idade": "25 anos",
+    "cidade": "Candeias - BA",
+    "texto": "Desde a minha primeira sessão me senti acolhida e segura. <br><br> Um espaço onde me senti ouvida, respeitada e confrontada com verdades necessárias para meu crescimento."
+  },
+  {
+    "id": 10,
+    "nome": "K",
+    "idade": "56 anos",
+    "cidade": "Guarulhos - SP",
+    "texto": "Excelente profissional, muito atenciosa. <br><br> Confio em contar meus conflitos internos e ela consegue me ajudar e acalmar meu coração."
+  },
+  {
+    "id": 11,
+    "nome": "T",
+    "idade": "38 anos",
+    "cidade": "Salvador - BA",
+    "texto": "A Rosa praticamente me tirou do fundo do poço. <br><br> Hoje encontro nela um espaço de escuta sem julgamentos e um acolhimento enorme. <br><br> Sou imensamente grata."
+  },
+  {
+    "id": 12,
+    "nome": "M",
+    "idade": "32 anos",
+    "cidade": "Austrália",
+    "texto": "Cheguei na terapia me sentindo perdida emocionalmente. <br><br> Aos poucos fui aprendendo a me entender, colocar limites e cuidar mais de mim."
+  },
+  {
+    "id": 13,
+    "nome": "L",
+    "idade": "21 anos",
+    "cidade": "Santarém - PA",
+    "texto": "A leveza no tratamento me ajudou a clarear a mente e pensar de forma menos caótica. <br><br> A forma simplificada da doutora falar me ajuda muito."
+  }
+  ]
+}
