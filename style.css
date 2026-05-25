@@ -365,3 +365,86 @@ footer { background: var(--dark); color: #fff; padding: 80px 24px 32px; }
     min-height: auto;
   }
 }
+
+/* ========================
+   RESPONSIVE EXTRA
+======================== */
+.carousel-container { overflow: hidden; }
+
+@media (max-width: 1024px) {
+  .hero { padding: 120px 24px 80px; }
+  .hero-text h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); }
+  .section-header h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); }
+  .hero-actions { gap: 20px; }
+  .waitlist-banner { padding: 48px 32px; }
+  .waitlist-form { max-width: 100%; }
+  .form-card { padding: 40px; }
+}
+
+@media (max-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    flex-direction: column;
+    padding: 24px 20px 28px;
+    border-bottom: 1px solid rgba(232,180,184,0.2);
+    gap: 18px;
+  }
+  .nav-links.open { display: flex; }
+  .menu-toggle { display: block; }
+  .nav-links a { font-size: 1rem; padding: 12px 0; }
+  .nav-container { padding: 0 16px; }
+  .outcomes-list { grid-template-columns: 1fr; }
+  .color-dots.right, .color-dots.left { display: none; }
+  .waitlist-form { flex-direction: column; }
+  .waitlist-form input { min-width: auto; width: 100%; }
+  .hero { padding: 120px 16px 60px; }
+  .hero-text p, .about-text p, .section-header p, .method p { font-size: 1rem; }
+  .hero-text h1 { font-size: clamp(2rem, 10vw, 3rem); }
+  .section-header h2 { font-size: clamp(2rem, 8vw, 2.75rem); }
+  .hero-image, .img-col { width: 100%; }
+  .hero-image .img-container, .img-col .img-container { max-width: 100%; margin: 0 auto; }
+  .img-container { min-height: 320px; }
+  .problem-block h3 { font-size: 1.15rem; }
+  .card { padding: 32px; }
+  .card h3 { font-size: 1.25rem; }
+  .waitlist-banner { padding: 40px 24px; }
+  .waitlist-banner h3 { font-size: 2rem; }
+  .waitlist-banner p { font-size: 1rem; }
+  .form-card { padding: 32px 20px; }
+  .form-group input, .form-group textarea { font-size: 0.95rem; }
+  .form-actions small { max-width: 100%; }
+  .carousel-container { max-width: 100%; }
+  .carousel-prev { left: 8px; }
+  .carousel-next { right: 8px; }
+  .carousel-btn { width: 42px; height: 42px; font-size: 1.25rem; }
+  .testimonial-card { padding: 32px 24px; min-height: auto; margin-left: 0; }
+  .stats-row { gap: 18px; }
+  .stat-card { padding: 28px; }
+  .about { padding: 64px 16px; }
+  .problems, .method, .feedbacks, .feedback-form { padding-left: 16px; padding-right: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 100px 16px 48px; }
+  .nav-container { height: 70px; }
+  .nav-logo { font-size: 1.1rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 16px; }
+  .btn-primary, .btn-burgundy { width: 100%; padding: 14px 18px; }
+  .btn-lg { padding: 14px 22px; font-size: 1rem; }
+  .section-header { margin-bottom: 48px; }
+  .section-header h2 { margin-bottom: 10px; }
+  .form-group label { margin-left: 0; }
+  .stars { justify-content: flex-start; margin-left: 0; }
+  .carousel-prev, .carousel-next { top: auto; bottom: 8px; transform: none; }
+  .carousel-prev { left: 16px; }
+  .carousel-next { right: 16px; }
+}
