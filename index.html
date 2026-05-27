@@ -6,7 +6,7 @@
   <title>Rosa Nóbrega - Psicóloga</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
-  <script src="GetForm.js"></script>
+ 
 </head>
 <body>
 
@@ -92,8 +92,8 @@
               <li>✅ desenvolverem autoconfiança</li>
               <li>✅ romperem padrões de autossabotagem</li>
               <li>✅ melhorarem sua relação com o corpo e com a comida</li>
-              <li>✅aprenderem a se priorizar sem culpa</li>
-              <li>✅ e construírem uma nova versão de si mesmas: mais leve, segura</li>
+              <li>✅ aprenderem a se priorizar sem culpa</li>
+              <li>✅ construírem uma nova versão de si mesmas: mais leve, segura</li>
             </ul>
             <a href="https://wa.me/557192242424?text=VIm%20pleo%20SIte%20%2C%20Quero%20agendar%20uma%20consulta."  class="btn-burgundy btn-lg" target="_blank" rel="noreferrer noopener">Quero Começar Agora</a>
           </div>
@@ -188,8 +188,8 @@
         <div class="waitlist-banner">
           <h3>Inscrições Em Breve ✨</h3>
           <p>O próximo grupo do Destrava está chegando. Entre na lista de espera e seja a primeira a saber.</p>
-          <form class="waitlist-form" onsubmit="handleWaitlist(event)">
-            <input type="email" placeholder="Seu melhor e-mail" required />
+          <form class="waitlist-form" action="https://formspree.io/f/mredrqzp"  method="POST" target="_blank" >
+            <input type="email" name="Email" placeholder="Seu melhor e-mail" required />
             <button type="submit" class="btn-burgundy">Quero me inscrever</button>
           </form>
           <small>Vagas limitadas para acompanhamento individual.</small>
@@ -230,18 +230,26 @@
           <p>Sua experiência pode inspirar outra mulher a dar o primeiro passo.</p>
         </div>
         <div class="form-card">
-          <form id="submit-to-google-sheet">
+          <form 
+          id="submit-to-google-sheet" 
+          action="https://formspree.io/f/mjgzjyno"  method="POST" target="_blank" >
+            <div class="form-group">
+              <label>Seu E-mail</label>
+              <input type="email" name="email"  />
+            </div>
+            
             <div class="form-group">
               <label>Seu Nome</label>
-              <input type="text" name="Nome" id="Nome" placeholder="Como você gostaria de ser chamada?" />
+              <input type="text" name="Nome" id="Nome"  />
             </div>
+           
             <div class="form-group">
               <label>Como foi sua experiência?</label>
               <textarea rows="4" name="Depoimento" id="Depoimento" placeholder="Conte-nos um pouco sobre sua jornada..."></textarea>
             </div>
             <div class="form-group">
               <label>Sua Avaliação</label>
-              <div class="stars" id="stars">
+              <div class="stars"  id="stars">
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
                 <span class="star" data-value="3">★</span>
@@ -299,31 +307,7 @@
   </footer>
 
   <script src="app.js">
- const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxvfq1XiDbI4_3k8efmPBl7v_EqpihQWdlERwPZz_cXmokg5nT2iEPxjfO51LP3oPo/exec";
 
-  const form = document.getElementById("submit-to-google-sheet");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    fetch(scriptURL, {
-      method: "POST",
-      body: formData,
-    })
-      .then(() => {
-        swal("Sucesso!", "Depoimento enviado com sucesso.", "success");
-
-        form.reset();
-      })
-      .catch((error) => {
-        console.error(error);
-
-        swal("Erro!", "Algo deu errado.", "error");
-      });
-  });
 
   </script>
 </body>
