@@ -6,6 +6,7 @@
   <title>Rosa Nóbrega - Psicóloga</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <script src="GetForm.js"></script>
 </head>
 <body>
 
@@ -229,14 +230,14 @@
           <p>Sua experiência pode inspirar outra mulher a dar o primeiro passo.</p>
         </div>
         <div class="form-card">
-          <form onsubmit="handleFeedback(event)">
+          <form id="submit-to-google-sheet">
             <div class="form-group">
               <label>Seu Nome</label>
-              <input type="text" placeholder="Como você gostaria de ser chamada?" />
+              <input type="text" name="Nome" id="Nome" placeholder="Como você gostaria de ser chamada?" />
             </div>
             <div class="form-group">
               <label>Como foi sua experiência?</label>
-              <textarea rows="4" placeholder="Conte-nos um pouco sobre sua jornada..."></textarea>
+              <textarea rows="4" name="Depoimento" id="Depoimento" placeholder="Conte-nos um pouco sobre sua jornada..."></textarea>
             </div>
             <div class="form-group">
               <label>Sua Avaliação</label>
@@ -297,6 +298,33 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js">
+ const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxvfq1XiDbI4_3k8efmPBl7v_EqpihQWdlERwPZz_cXmokg5nT2iEPxjfO51LP3oPo/exec";
+
+  const form = document.getElementById("submit-to-google-sheet");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData,
+    })
+      .then(() => {
+        swal("Sucesso!", "Depoimento enviado com sucesso.", "success");
+
+        form.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+
+        swal("Erro!", "Algo deu errado.", "error");
+      });
+  });
+
+  </script>
 </body>
 </html>

@@ -70,29 +70,6 @@ function handleWaitlist(e) {
   input.value = '';
 }
 
-// ========================
-// FORM - DEPOIMENTO
-// ========================
-function handleFeedback(e) {
-  e.preventDefault();
-  const name = e.target.querySelector('input[type="text"]').value.trim();
-  const text = e.target.querySelector('textarea').value.trim();
-
-  if (!name || !text) {
-    alert('Por favor, preencha seu nome e depoimento.');
-    return;
-  }
-
-  if (selectedRating === 0) {
-    alert('Por favor, selecione uma avaliação com as estrelas.');
-    return;
-  }
-
-  alert(`💖 Obrigada, ${name}! Seu depoimento foi enviado e será analisado em breve.`);
-  e.target.reset();
-  selectedRating = 0;
-  highlightStars(0);
-}
 
 // ========================
 // SCROLL SUAVE
